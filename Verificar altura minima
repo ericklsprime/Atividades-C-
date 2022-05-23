@@ -1,0 +1,67 @@
+#include <stdio.h>
+
+#include <iostream>
+
+#include <stddef.h>
+
+#include <locale.h>
+
+
+
+int main(void)
+
+
+{
+setlocale(LC_ALL,"portuguese");
+
+float altura1, altura2, altura3, alt_min;
+int pesquisa;
+
+alt_min = 1.80;
+
+altura1 = 1.73;
+
+altura2 = 1.81;
+
+altura3 = 1.83;
+
+printf("----ANALISE ALTURAS----:\n\n");
+
+printf("Altura da Pessoa 1: %.2f\n\n", altura1);
+
+printf("Altura da Pessoa 2: %.2f\n\n", altura2);
+
+printf("Altura da Pessoa 3: %.2f\n\n", altura3);
+
+do
+{
+    printf("Deseja realizar a pesquisa?\n\n [1] Sim\n\n [2] Não\n\n");
+
+    scanf("%d", &pesquisa);
+
+    if(pesquisa==2) break;
+
+    if(altura1<1.80) {
+                        printf("Acesso negado.\n");
+                     }
+    else{
+            printf("Acesso permitido\n");
+        }
+    if(altura2<1.80){
+                        printf("Acesso negado.\n");
+                     }
+    else{
+            printf("Acesso permitido\n");
+        }
+    if(altura3<1.80){
+                        printf("Acesso negado.\n");
+                     }
+    else{
+            printf("Acesso permitido\n");
+        }
+
+                  }
+while(pesquisa!=2);
+
+  return 0; 
+}
